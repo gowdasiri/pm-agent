@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: product-memory-mcp
+    env: docker
+    plan: starter
+    autoDeploy: false
+    envVars:
+      - key: PRODUCT_MEMORY_STORE_PATH
+        value: /data/store.json
+      - key: ATLASSIAN_BASE_URL
+        sync: false
+      - key: ATLASSIAN_EMAIL
+        sync: false
+      - key: ATLASSIAN_API_TOKEN
+        sync: false
